@@ -1,7 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-</RelativeLayout>
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="?attr/actionBarSize"
+	    android:background="?attr/colorPrimary"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+	<android.support.v4.widget.DrawerLayout
+		android:id="@+id/drawer_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+	<LinearLayout android:layout_height="match_parent"
+	 android:layout_width="match_parent"
+	 android:orientation="vertical"	
+		>
+		<LinearLayout android:layout_height="500dp"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_weight="1">
+			<TextView android:layout_height="100dp"
+				android:layout_width="match_parent"
+				android:text="Mostly Cloudy"
+				android:layout_weight="1"
+				android:textSize="40sp"
+				android:textAlignment="center"
+				android:paddingTop="20dp"
+				android:id="@+id/WeatherDescription"
+			  android:textColor="@android:color/white"
+			/>
+			<TextView android:layout_height="100dp"
+				android:layout_width="match_parent"
+				android:text="50"
+				android:layout_weight="1"
+				android:textSize="40sp"
+				android:textAlignment="center"
+				android:id="@+id/Temperature"
+				android:textColor="@android:color/white"
+				/>
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:orientation="horizontal">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="Today"
+					android:textSize="20sp"
+				android:textColor="@android:color/white"/>
+					<TextView android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0.5"
+					android:text="7"
+					android:textSize="20sp"
+				android:textAlignment="viewEnd"
+				android:id="@+id/MinTemp"
+				android:textColor="@android:color/white"/>
+					<TextView android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_weight="0.5"
+					android:text="8"
+					android:textSize="20sp"
+				android:textAlignment="viewEnd"
+				android:paddingRight="20dp"
+				android:id="@+id/MaxTemp"
+				android:textColor="@android:color/white"/>
+			</LinearLayout>
+		</LinearLayout>
+		<android.support.v7.widget.RecyclerView
+        android:id="@+id/today_detl"
+        android:scrollbars="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height= "80dp"
+		android:orientation="horizontal"/>
+		<LinearLayout android:layout_height="fill_parent"
+				android:layout_width="match_parent"
+				
+				android:layout_weight="1">
+			<ListView android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:id="@+id/forecast_view"/>
+		</LinearLayout>
+		
+		
+    </LinearLayout>
+<ListView
+			android:id="@+id/menu_drawer"
+			android:layout_width="240dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="start"
+			android:choiceMode="singleChoice"
+			android:divider="#041226"
+			android:dividerHeight="1dp"
+			android:background="#e9edf2"/>
+	</android.support.v4.widget.DrawerLayout>
+</LinearLayout>

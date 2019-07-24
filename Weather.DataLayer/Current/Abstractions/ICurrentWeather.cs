@@ -33,7 +33,7 @@ namespace Weather.DataLayer.Current
         int Dt { get; set; }
 
         [JsonProperty("sys")]
-        GeographicalData Sys { get; set; }
+        GeographicalData GeoData { get; set; }
 
         [JsonProperty("timezone")]
         int Timezone { get; set; }

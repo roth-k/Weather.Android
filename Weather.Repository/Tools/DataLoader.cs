@@ -29,7 +29,8 @@ namespace Weather.Repository
         {
             using (var wc = new WebClient())
             {
-                return await wc.DownloadStringTaskAsync(url);
+               var data= await wc.DownloadStringTaskAsync(url);
+               return data;
             }
         }
     }

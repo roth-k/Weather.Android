@@ -18,7 +18,7 @@ namespace Weather.DataLayer.Forecast.Abstractions
          int Cnt { get; set; }
 
         [JsonProperty("list")]
-         List<BaseInfo> List { get; set; }
+         List<BaseInfo> Info { get; set; }
 
         [JsonProperty("city")]
         CityGeographicalData City { get; set; }

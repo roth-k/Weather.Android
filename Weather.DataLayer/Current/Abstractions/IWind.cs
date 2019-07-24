@@ -11,6 +11,6 @@ namespace Weather.DataLayer.Current.Abstractions
          double Speed { get; set; }
 
         [JsonProperty("deg")]
-         int Deg { get; set; }
+         double Deg { get; set; }
     }
 }

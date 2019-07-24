@@ -8,6 +8,6 @@ namespace Weather.DataLayer.Current.Implementations
     public class Wind : IWind
     {
         public double Speed { get; set; }
-        public int Deg { get; set; }
+        public double Deg { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace Weather.DataLayer.Current
         public Wind Wind { get; set; }
         public Cloud Clouds { get; set; }
         public int Dt { get; set; }
-        public GeographicalData Sys { get; set; }
+        public GeographicalData GeoData { get; set; }
         public int Timezone { get; set; }
         public int ID { get; set; }
         public string Name { get; set; }
