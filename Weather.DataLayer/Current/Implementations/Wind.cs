@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Weather.DataLayer.Current.Abstractions;
 
 namespace Weather.DataLayer.Current.Implementations
 {
-    class Wind
+    public class Wind : IWind
     {
+        public double Speed { get; set; }
+        public int Deg { get; set; }
     }
 }

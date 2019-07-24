@@ -1,10 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Weather.DataLayer.Current.Abstractions
 {
-    interface ICoordinates
+    public interface ICoordinates
     {
+        [JsonProperty("lon")]
+         double Lon { get; set; }
+
+        [JsonProperty("lat")]
+         double Lat { get; set; }
     }
 }

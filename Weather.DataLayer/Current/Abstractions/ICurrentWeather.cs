@@ -2,22 +2,23 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Weather.DataLayer.Current.Implementations;
 
 namespace Weather.DataLayer.Current
 {
     public interface ICurrentWeather
     {
         [JsonProperty("coord")]
-        Coord Coord { get; set; }
+        Coordinates Coord { get; set; }
 
         [JsonProperty("weather")]
-        List<Weather> Weather { get; set; }
+        List<WeatherDescribtion> Weather { get; set; }
 
         [JsonProperty("base")]
         string Base { get; set; }
 
         [JsonProperty("main")]
-        Main Main { get; set; }
+        MainInfo Main { get; set; }
 
         [JsonProperty("visibility")]
         int Visibility { get; set; }
@@ -26,24 +27,24 @@ namespace Weather.DataLayer.Current
         Wind Wind { get; set; }
 
         [JsonProperty("clouds")]
-        Clouds Clouds { get; set; }
+        Cloud Clouds { get; set; }
 
         [JsonProperty("dt")]
-        int dt { get; set; }
+        int Dt { get; set; }
 
         [JsonProperty("sys")]
-        Sys sys { get; set; }
+        GeographicalData Sys { get; set; }
 
         [JsonProperty("timezone")]
-        int timezone { get; set; }
+        int Timezone { get; set; }
 
         [JsonProperty("id")]
-        int id { get; set; }
+        int ID { get; set; }
 
         [JsonProperty("name")]
-        string name { get; set; }
+        string Name { get; set; }
 
         [JsonProperty("cod")]
-        int cod { get; set; }
+        int Cod { get; set; }
     }
 }

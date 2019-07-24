@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Weather.DataLayer.Forecast.Abstractions
 {
-    class ISys
+    public interface ISys
     {
+        [JsonProperty("pod")]
+         string Pod { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Weather.DataLayer.Current.Abstractions
 {
-    public interface IWaatherDetails
+    public interface IWeatherDetails
     {
         [JsonProperty("id")]
          int Id { get; set; }

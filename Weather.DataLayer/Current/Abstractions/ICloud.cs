@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Weather.DataLayer.Current.Abstractions
 {
-    interface ICloud
+    public interface ICloud
     {
+        [JsonProperty("all")]
+         int All { get; set; }
     }
 }

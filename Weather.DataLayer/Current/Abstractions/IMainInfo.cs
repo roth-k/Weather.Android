@@ -17,9 +17,9 @@ namespace Weather.DataLayer.Current.Abstractions
          int Humidity { get; set; }
 
         [JsonProperty("temp_min")]
-         int Temp_min { get; set; }
+         int TempMin { get; set; }
 
         [JsonProperty("temp_max")]
-         int Temp_max { get; set; }
+         int TempMax { get; set; }
     }
 }
