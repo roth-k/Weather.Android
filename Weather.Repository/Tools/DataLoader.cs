@@ -25,11 +25,11 @@ namespace Weather.Repository
         public async Task<string> GetForecastJsonForCelsiusAsync() =>
           await DowloadAcync(ApiManager.Instance.GetForecastUrlForCelsius(_location));
 
-        private async Task<string> DowloadAcync(string address)
+        private async Task<string> DowloadAcync(string url)
         {
             using (var wc = new WebClient())
             {
-                return await wc.DownloadStringTaskAsync(address);
+                return await wc.DownloadStringTaskAsync(url);
             }
         }
     }

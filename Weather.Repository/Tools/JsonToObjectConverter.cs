@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Weather.Repository
 {
-    public class StringToJsonConverter
+    public class JsonToObjectConverter
     {
         public T Convert<T>(string data) =>
             JsonConvert.DeserializeObject<T>(data);
