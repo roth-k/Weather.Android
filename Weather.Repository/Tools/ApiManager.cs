@@ -34,13 +34,14 @@ namespace Weather.Repository
         private readonly string _farinheit = "&units=imperial";
         private readonly string _celsius = "&units=metric";
 
-       public string GetForecastUrlForCelsius(string location)=> 
-            _baseUrl + _forecast + location + _celsius + _accountID;
-       public string GetForecastUrlForFarinheit(string location)=>
-             _baseUrl + _forecast + location + _farinheit + _accountID;
-        public string GetCurrentWeatherUrlForCelsius(string location)=>
-             _baseUrl + _current + location + _farinheit + _accountID;
-
+        public string GetForecastUrlForCelsius(string location) =>
+             _baseUrl + _forecast + location + _celsius + _accountID;
+        public string GetForecastUrlForFarinheit(string location) =>
+              _baseUrl + _forecast + location + _farinheit + _accountID;
+        public string GetCurrentWeatherUrlForCelsius(string location) =>
+              _baseUrl + _current + location + _celsius + _accountID;
+        public string GetCurrentWeatherUrlForFarinheit(string location) =>
+              _baseUrl + _current + location + _farinheit + _accountID;
 
     }
 }
